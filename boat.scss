@@ -1,0 +1,40 @@
+@use 'color';
+
+.boat {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  transform-origin: bottom;
+  animation: boatMove 3s ease-in-out infinite alternate;
+
+  .boat-body {
+    width: 200px;
+    height: 60px;
+    background: color.$boat;
+    border-radius: 0 0 50% 50%;
+  }
+
+  .boat-sail {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid color.$boat;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes boatMove {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1) rotate(5deg);
+  }
+}
