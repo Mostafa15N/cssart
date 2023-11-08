@@ -1,6 +1,7 @@
 @use 'color';
 @use 'mixins';
 
+
 .boat {
   position: absolute;
   bottom: 50px;
@@ -10,6 +11,7 @@
   height: 100px;
   transform-origin: bottom;
   animation: boatMove 3s ease-in-out infinite alternate;
+  @include mixins.boat-animation; // Include the mixin here
 
   .boat-body {
     width: 200px;

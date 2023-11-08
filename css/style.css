@@ -7,6 +7,12 @@ body {
   flex-direction: column;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .ocean {
   width: 100%;
   height: 40%;
@@ -33,6 +39,14 @@ body {
   height: 100px;
   transform-origin: bottom;
   animation: boatMove 3s ease-in-out infinite alternate;
+}
+@keyframes boatMove {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1) rotate(5deg);
+  }
 }
 .boat .boat-body {
   width: 200px;
